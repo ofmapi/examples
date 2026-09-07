@@ -1,7 +1,8 @@
-# OFMAPI examples
+# OnlyFans API examples (OFMAPI)
 
-Small, self-contained examples for the [OFMAPI](https://ofmapi.com) OnlyFans
-API. Each directory runs on its own with an API key from
+Small, self-contained examples for the OFMAPI OnlyFans API: verify and
+handle signed webhooks, send a direct message or a paid PPV, and export
+earnings to CSV. Each directory runs on its own with an API key from
 [app.ofmapi.com/api-keys](https://app.ofmapi.com/api-keys) (free during the
 public Beta, no card required).
 
@@ -31,6 +32,13 @@ The signing secret is returned once in that response; store it as
 `OFMAPI_WEBHOOK_SECRET`. For local testing expose the receiver with a tunnel
 such as `cloudflared tunnel --url http://localhost:8000`.
 
+## What you can build with the OnlyFans API
+
+Fan-messaging chatbots, agency CRMs and dashboards, mass-messaging and PPV
+tooling, earnings analytics, content scheduling, and n8n or Zapier
+automations. The hosted MCP server exposes the same API to Claude, ChatGPT,
+Cursor, and VS Code as 174 tools.
+
 ## More
 
 - Quickstart: https://ofmapi.com/docs/quickstart
@@ -38,6 +46,7 @@ such as `cloudflared tunnel --url http://localhost:8000`.
 - Webhook event catalog and signature scheme: https://ofmapi.com/docs/webhooks
 - Postman collection: https://github.com/ofmapi/postman-collection
 - Hosted MCP server for Claude, ChatGPT, Cursor, and VS Code: https://ofmapi.com/integrations/mcp
+- Contact and support: https://ofmapi.com/contact
 
 Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
