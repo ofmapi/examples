@@ -5,7 +5,7 @@
     python export_transactions.py acct_4f8a --start 2026-01-01 -o transactions.csv
 
 Walks GET /v1/accounts/{id}/transactions with cursor pagination until
-has_more is false. Column set is derived from the first page so the script
+hasMore is false. Column set is derived from the first page so the script
 keeps working when the API adds fields.
 """
 import argparse
@@ -37,7 +37,7 @@ def fetch_all(account_id: str, start: str, tx_type: str | None):
             raise SystemExit(f"{r.status_code} {problem.get('code')}: {problem.get('detail') or problem.get('title')}")
         page = r.json()
         yield from page.get("transactions", [])
-        if not page.get("has_more") or not page.get("cursor"):
+        if not page.get("hasMore") or not page.get("cursor"):
             return
         cursor = page["cursor"]
 
