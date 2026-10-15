@@ -3,6 +3,11 @@
 Walks `GET /v1/accounts/{account_id}/transactions` from a start date with
 cursor pagination and writes every transaction to CSV.
 
+> **Fixed 2026-10-15:** earlier copies of this script checked `has_more`
+> instead of the API's `hasMore` field, so they stopped after the first
+> page while still printing a row count. If you exported with an earlier
+> copy, run the export again to get the complete file.
+
 ```bash
 pip install requests
 export OFMAPI_KEY=ofmapi_...
